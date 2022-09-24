@@ -9,6 +9,7 @@ html, body {
 body {
     max-width: 960px;
     text-align: center;
+    padding: 0 4%;
     margin: auto ;
 }  
 a{
@@ -93,4 +94,25 @@ nav{
 /* フッター */
 .footer p{
     margin: 20px auto;
+}
+
+@media screen and (max-width: 600px) {
+    #about .profile{
+        display: block;
+        text-align: center;
+    }
+    #about .profile img{
+        margin: 0 auto;
+    }
+    #about .profile-content{
+        text-align: left;
+    }
+    #bicycle .list{
+        display: block;
+    }
+    #bicycle .list-item{
+        margin-bottom: 30px;
+        margin-right: 0;
+    }    
+
 }
