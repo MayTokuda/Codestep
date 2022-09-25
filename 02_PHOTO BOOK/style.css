@@ -1,0 +1,107 @@
+@charset "UTF-8";
+:root{
+    --basecolor : #3F4042;
+    --bgccolor : #F4F9FF;
+    --bgccolor2 : #FFFFFF;
+    --titlecolor : #142629;
+    --textcolor : #576C7F;
+    --bordercolor : #E4E9ED;
+}
+html {
+    font-size: 100%;
+}
+body {
+    color: var(--basecolor);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    background-color: var(--bgccolor);
+}
+a {
+    color: var(--basecolor);
+}
+img {
+    max-width: 100%;
+    vertical-align: middle; /* 画像の下にできる隙間をなくす */
+}
+ul{
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+.wrapper{
+    width: 1000px;
+    margin: 50px auto 0;
+    justify-content: center;
+}
+section{
+    margin-bottom: 70px;
+}
+.section-block{
+    width: 600px;
+    margin:  50px auto;
+}
+
+/* ヘッダー */
+.header img{
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* INDEX */
+#index{
+    background-color: var(--bgccolor2);
+}
+#index .section-block{
+    padding-top: 10px ;
+    padding-bottom: 20px;
+    justify-items: left;
+}
+#index .section-title{
+    margin-bottom: 5px;
+}
+#index .index-list{
+    justify-content: left;
+    padding-left: 0;
+}   
+#index .index-list li{
+    padding-bottom: 10px;
+}
+
+/* DETAIL */
+#detail .detail-block{
+    display: flex;
+    justify-content: space-between;
+}
+#detail .detail-block figure{
+    margin: auto 0;
+    flex-shrink: 0;
+}
+#detail .detail-block img{
+    width: 270px;
+}
+#detail .block-content{
+    width: 270px;
+}
+#detail .detail-title{
+    margin: 0 auto 10px;
+    padding-bottom: 20px;
+    border-bottom: solid 1.5px var(--bordercolor);
+}
+#detail .detail-list tr{
+    line-height: 1.2;
+}
+#detail .detail-list td:first-child{
+    padding-right: 20px;
+}
+#detail .detail-list .conten-text{
+    border-top: solid 1.5px var(--bordercolor);
+    margin: 10px auto 15px;
+    padding-top: 20px;
+}
+
+/* フッター */
+footer{
+    width: 600px;
+    margin:  100px auto 0;
+}
