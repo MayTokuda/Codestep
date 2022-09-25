@@ -15,6 +15,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     background-color: var(--bgccolor);
+    margin: 0%;
 }
 a {
     color: var(--basecolor);
@@ -23,11 +24,8 @@ img {
     max-width: 100%;
     vertical-align: middle; /* 画像の下にできる隙間をなくす */
 }
-ul{
+ol{
     margin: 0;
-}
-li {
-    list-style: none;
 }
 .wrapper{
     width: 1000px;
@@ -63,6 +61,8 @@ section{
 #index .index-list{
     justify-content: left;
     padding-left: 0;
+    list-style-position: inside;  /* 箇条書きのテキストの開始位置 */
+    margin-left: 0.3em;
 }   
 #index .index-list li{
     padding-bottom: 10px;
@@ -105,3 +105,51 @@ footer{
     width: 600px;
     margin:  100px auto 0;
 }
+
+/* レスポンシブ */
+@media screen and (max-width: 1024px) {
+    .wrapper{
+        width: 100%;
+        margin: 100px 0 0 0;
+    }
+    .section-block{
+        width: 75%;
+    }
+    .header img{
+        width: 50%;
+        margin-left: 2%;
+    }
+    #mainvisual img{
+        display: block;
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    /* INDEX */
+    #index .index-list{
+        margin-left: 1.2em;
+        text-indent: -1.2em;
+    }
+
+    /* DETAIL */
+    #detail .detail-block{
+        flex-direction:column;
+        width: 100%;
+        justify-content: center;
+        margin: auto 0;
+    }
+    #detail .detail-block img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #detail .detail-list td:first-child{
+        padding-right: 10vw;
+    }
+    #detail .block-content{
+        width: 100%;
+    }
+    /* フッター */
+    footer{
+        width: 75%;
+    }
+}       
