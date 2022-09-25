@@ -75,7 +75,7 @@ section{
 }
 #detail .detail-block figure{
     margin: auto 0;
-    flex-shrink: 0;
+    flex-shrink: 0;  /* 画像が小さくなるのを防ぐ */
 }
 #detail .detail-block img{
     width: 270px;

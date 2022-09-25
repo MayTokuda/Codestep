@@ -1,0 +1,124 @@
+@charset "UTF-8";
+:root{
+    --basecolor: #333333;
+    --bgcolor: #F5F5F5;
+}
+html {
+    font-size: 100%;
+}
+body {
+    color: #050507;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    margin: auto;
+}
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+.inner{
+    max-width: 800px;
+    margin: auto;
+}
+section{
+    width: 800px;
+    margin: auto auto 70px;
+}
+.section-title{
+    text-align: center;
+}
+/* ヘッダー */
+header{
+    width: 180px;
+    padding-left: 10px;
+}
+/* mainvisual */
+#mainvisual{
+    margin-bottom: 70px;
+}
+/* INDEX */
+#index{
+    background-color: var(--bgcolor);
+    padding: 60px 0;
+    width: 100%;
+}
+#index .section-title{
+    margin-bottom: 30px;
+}
+#index .wrap{
+    text-align: center;
+    border: solid 1px var(--basecolor);
+    padding: auto;
+    margin: auto 60px;
+}
+.index-list{
+    display: inline-block;
+    list-style-position: inside;  /* 箇条書きのテキストの開始位置 */
+    padding-left: 0;
+}
+#index .index-list li{
+    text-align: left;
+    line-height: 2.5;
+
+}
+/* thumnail */
+#thumnail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#thumnail>img{
+    width: 49%;
+    margin-bottom: 2%
+}
+
+/* DETAIL */
+#detail{
+    background-color: var(--bgcolor);
+    padding: 60px 0;
+}
+#detail .wrap{
+    display: flex;
+    text-align: left;
+    padding: auto;
+    margin: 0 60px;
+}
+#detail .detail-list{
+    width: 30%;
+    padding-right: 40px;
+    border-right: solid 1px var(--basecolor);
+    height: 180px;
+    align-items: stretch;
+}
+dt{
+    font-weight: bold;
+    margin-left: 0;
+}
+dd{
+    padding-bottom: 10px;
+    margin-left: 0;
+}
+dd:last-child{
+    padding-bottom: 0;
+}
+#detail .detail-text{
+    flex: 1;
+    line-height: 1.7;
+    margin: 0 auto 15px 40px;
+}
+#detail p{
+    margin-bottom: 15px;
+}
+#detail a{
+    color: var(--basecolor);
+    opacity: 0.8;
+    padding-bottom: 0;
+}
