@@ -60,9 +60,7 @@ header{
     margin: auto 60px;
 }
 .index-list{
-    display: flex;
     list-style-position: inside;  /* 箇条書きのテキストの開始位置 */
-    padding-left: 0;
 }
 #index .index-list li{
     text-align: left;
@@ -159,14 +157,12 @@ dd:last-child{
         margin: auto 20px;
     }
     #detail .detail-list{
-        display: inline-block;
-        width: 100%;
         padding: 0 0 40px 0;
         border-right: none;
         border-bottom: solid 1px var(--basecolor);
     }
     #detail .detail-text{
-        flex: none;
+        flex: 1;
         padding-top: 20px;
         margin-left: 0;
     }
