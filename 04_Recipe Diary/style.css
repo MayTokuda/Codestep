@@ -1,0 +1,80 @@
+@charset "UTF-8";
+:root{
+    --basecolor: ;
+}
+html {
+    
+    font-size: 100%;
+}
+body {
+    color: #050507;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Sans, Meiryo', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+a {
+    color: black;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+ul{
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+/* fv */
+.mainvisual{
+    height: 100vh; 
+    overflow: hidden;
+}
+.mainvisual img {
+    height: 100vh; 
+    width: 100%;
+    object-fit: cover;
+    }
+/* トップ */
+.top .container{
+    margin: 80px auto;
+}
+/* レシピ */
+.recipe-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.recipe-list img{
+    width: 33.33333%;
+    height: 500px;
+    align-items: center;
+    object-fit: cover;
+}
+.recipe p{
+    border: solid 1px black;
+    width: fit-content;
+    padding: 15px 50px;
+    margin: 60px auto;
+}
+.recipe a{
+    text-decoration: none;
+}
+/* フッター */
+.footer .contact-list{
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    margin: auto;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 834px) {
+    /* レシピ */
+    .recipe-list{
+        flex-direction: column;
+    }
+    .recipe-list img{
+        width: 100%;
+    }
+}
