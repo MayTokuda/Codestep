@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+html {
+    font-size: 14px;
+}
+body {
+    color: #24292e;
+    font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo',sans-serif;
+    text-align: center;
+    margin: auto 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+li {
+    list-style: none;
+}
+/* ナビゲーション */
+.header{
+    max-width: 960px;
+    margin: 120px auto;
+}
+.header-nav{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    padding: 0 4%;
+}
+.site-title {
+    width: 120px;
+    padding-left: 0;
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+.nav-list .nav-item{
+    padding-left: 25px;
+}
+.nav-list .nav-item img{
+    display: flex;
+    width: 20px;
+}
+.link{
+    color: #24292e;
+}
+.link:hover {
+    opacity: 0.7;
+}
+/* メインビジュアル */
+.mainvisual {
+    margin-bottom: 130px;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+.mainvisual .img-sp{
+    display: none;
+}
+/* コンテンツ共通 */
+.section-wrap{
+    max-width: 960px;
+    margin: 0 auto;
+}
+section{
+    padding: 0 4%;
+    margin-bottom: 130px;
+}
+.section-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 65px;
+}
+/* About */
+#about .about-content{
+    display: block;
+    text-align: left;
+}
+#about .about-content p{
+    padding: 15px 0;
+}
+/* Works */
+#works .sectioin-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: space-between;
+}
+/* News */
+#news .news-list{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    text-align: left;
+    border-bottom: solid 2px #E7E7E7;
+}
+#news .news-list dd,dt{
+    border-top: solid 2px #E7E7E7;
+    padding: 15px 0 15px 15px;
+}
+/* Contact */
+#contact .form-item{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    text-align: left;
+    margin-bottom: 10px;
+}
+#contact .form-item-input{
+    height: 45px;
+    border: solid 2px #E7E7E7;
+}
+#contact .item3 .form-item-input {
+    height: 160px;
+}
+#contact .form-btn{
+    color: #fff;
+    background-color: #000;
+    padding: 15px 80px;
+    margin-top: 35px;
+}
+#contact .form-btn:hover{
+    color: #000;
+    background-color: #fff;
+}
+/* フッター */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+    font-size: 10px;
+    height: 35px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 600px) {
+    /* ナビゲーション */
+    .header{
+    margin: 20px auto 15px;
+    }
+    .header-nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .site-title{
+        padding-bottom: 10px;
+    }
+    .nav-list .nav-item{
+        font-size: 13px;
+        padding-left: 15px;
+    }
+    /* メインビジュアル */
+    .mainvisual {
+        margin-bottom: 90px;
+    }
+    .mainvisual .img-pc{
+        display: none;
+    }
+    .mainvisual .img-sp{
+        display: block;
+    }
+    /* コンテンツ共通部分 */
+    section{
+        margin-bottom: 70px;
+    }
+    .section-title{
+        margin-bottom: 40px;
+    }
+    /* Works */
+    #works .sectioin-content{
+        /* display: block; */
+        grid-template-columns: 1fr;
+    }
+    /* News */
+    #news .news-list{
+        grid-template-columns: 1fr;
+    }
+    #news .news-list dt{
+        padding-bottom: 0;
+    }
+    #news .news-list dd{
+    border-top: none;
+    padding-top: 0;
+    }
+    /* Contact */
+    #contact .form-item{
+        grid-template-columns: 1fr;
+    }
+}
+
