@@ -33,7 +33,7 @@ p, table{
 
 /* ヘッダー */
 .header{
-    border-bottom: solid 1px ;
+    border-bottom: solid 1px var(--linecolor);
 }
 .inner{
     max-width: 1000px;
@@ -172,4 +172,27 @@ select {
 /* フッター */
 .copyright{
     padding: 10px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 896px) {
+    .header{
+        border-bottom: none;
+    }
+    .header .nav-menu{
+        overflow: auto;
+    }
+    #item{
+        padding-top: 0;
+    }
+    .item-content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .item-detail {
+        padding: 0 15px;
+    }
+    .item-title{
+    margin-top: 15px;
+    }
 }
