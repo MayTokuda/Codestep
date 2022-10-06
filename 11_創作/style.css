@@ -1,0 +1,282 @@
+@charset "UTF-8";
+:root {
+    --f1: 36px;
+    --f2: 28px;
+    --f3: 24px;
+    --f4: 16px;
+    --f5: 14px;
+    --f6: 10px;
+    --basecolor: #141414; /* 基本色 */
+    --basecolor2: #FFFFFF; /* 基本色2 */
+    --bgcolor: #E6E2D7;
+    --myw: 1024px; /* 標準幅 */
+}
+html {
+    font-size: 100%;
+}
+body {
+    color: var(--basecolor);
+    background-color: var(--bgcolor);
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    /* 背景画像が読み込まれる前に表示される背景のカラー */
+    /* background-color: #464646; */
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+li {
+    list-style: none;
+}
+/* ヘッダー */
+.header{
+    color: var(--basecolor2);
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+        /* 縦書き ※bodyには入れない！！*/
+        writing-mode: vertical-rl;
+        -webkit-writing-mode: vertical-rl;  /* Chrome、Safari用 */
+        -moz-writing-mode: vertical-rl;     /* Firefox用 */
+        -ms-writing-mode: tb-rl;            /* IE用 */
+}
+        .header-bg{
+            width: 100%;
+            height: 100vh;
+            background-image: url(img/mainvisual-pc.jpg);
+            /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+            background-size: cover;
+            /* 画像を常に天地左右の中央に配置 */
+            background-position: center center;
+            /* 画像をタイル状に繰り返し表示しない */
+            background-repeat: no-repeat;
+                /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+                /* background-attachment: fixed; */
+        }
+.header .fv img{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    }
+.header .header-inner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 55px;
+    padding-right: 80px;
+}
+.header .header-inner .nav-list{
+    margin-right: 60px;
+    line-height: 2.5;
+}
+.header .online-link{
+    color: #fff;
+    position: absolute;
+    bottom: 4%;
+    left:  4%;
+    transform: translate(-4%, -4%);
+    background-color: rgb(255, 255, 255, 0.2);
+    height: fit-content;
+    padding: 8px 23px;
+    margin-bottom: 0;
+}
+.header .online-link a{
+    border: solid 1px #fff;
+    padding: 30px 15px ;
+    box-sizing: border-box;
+}
+/* 共通 */
+.inner{
+    max-width: 1024px;
+    box-sizing: border-box;
+    text-align: start;
+    padding: 0 2%;
+    margin:  0 auto;
+}
+section{
+    box-sizing: border-box;
+    padding-top: 180px;
+    width: 100%;
+}
+.section-title{
+    font-size: var(--f1);
+}
+/* お知らせ */
+#news{
+    /* 縦書き */
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;  /* Chrome、Safari用 */
+    -moz-writing-mode: vertical-rl;     /* Firefox用 */
+    -ms-writing-mode: tb-rl;            /* IE用 */
+    padding-right: 30px;
+}
+#news .section-title{
+    position: relative;
+}
+#news .section-title::before{
+    position: absolute;
+    content: attr(title);
+    font-size: var(--f4);
+    display: inline-block;
+    right: -30px;
+}
+#news .archive-list{
+    display: flex;
+    flex-direction: column;
+    width: var(--myw);
+    padding-top: 75px;
+    padding-right: 100px;
+}
+#news .archive-list dt{
+    width: fit-content;
+    padding-top: 15px;
+    padding-right: 30px;
+}
+#news .archive-list dt:first-child{
+    border-right: solid 1px var(--basecolor);
+}
+#news .archive-list dd{
+    width: fit-content;
+    padding: 15px 0 15px 30px;
+    border-left: solid 1px var(--basecolor);
+}
+/* 新しい価値の創造 */
+#product1 {
+    /* 縦書き */
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;  /* Chrome、Safari用 */
+    -moz-writing-mode: vertical-rl;     /* Firefox用 */
+    -ms-writing-mode: tb-rl;            /* IE用 */
+}
+#product1 .section-title::after{
+    content: attr(title);
+    font-size: var(--f4);
+    display: inline-block;
+    padding-top: 20px;
+}
+#product1 .product1-img{
+    position: relative;   
+    writing-mode: vertical-lr;
+    height:auto;
+    padding-top: 100px;
+    padding-right: 20px;
+}
+#product1 .product1-img img{
+    width:640px;
+}
+#product1 .product1-detail{
+    color: var(--basecolor2);
+    background-color: rgb(243, 233, 6, 0.6);
+    /* 横書き */
+    writing-mode: horizontal-tb;
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    padding: 50px 115px;
+}
+/* 科学と技術の調和 */
+.product2{
+    text-align: start;
+}
+#product2 {
+    /* 縦書き */
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;  /* Chrome、Safari用 */
+    -moz-writing-mode: vertical-rl;     /* Firefox用 */
+    -ms-writing-mode: tb-rl;            /* IE用 */
+    margin: 0 auto 0 0 ;
+}
+#product2 .section-title::after{
+    content: attr(title);
+    font-size: var(--f4);
+    display: inline-block;
+    padding-top: 20px;
+}
+#product2 .product2-img{
+    position: relative;   
+    writing-mode: vertical-lr;
+    height:auto;
+    padding-top: 100px;
+    padding-left: 20px;
+}
+#product2 .product2-img img{
+    width:640px;
+}
+#product2 .product2-detail{
+    color: var(--basecolor2);
+    background-color: rgb(149, 42, 38, 0.6);
+    /* 横書き */
+    writing-mode: horizontal-tb;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    padding: 50px 115px;
+}
+/* MAP */
+#map iframe{
+    width: 100%;
+    height: 450px;
+    vertical-align: bottom;
+}
+/* フッター */
+.footer{
+    position: relative;
+    color: var(--basecolor2);
+    background-color: #000;
+    height: 500px;
+    text-align: right;
+
+}
+.footer .inner{
+    /* 縦書き */
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;  /* Chrome、Safari用 */
+    -moz-writing-mode: vertical-rl;     /* Firefox用 */
+    -ms-writing-mode: tb-rl;            /* IE用 */
+}
+.footer-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: start;
+    padding-top: 55px;
+    padding-right: 80px;
+    margin: auto 0;
+
+}
+.footer .nav-list{
+    margin-right: 60px;
+    line-height: 2.5;
+}
+.footer .online-link{
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    white-space: nowrap;
+    font-size: var(--f5);
+}
+.footer .copyright{
+    position: absolute;
+    right: 50%;
+    bottom: 30px;
+    transform: translateX(50%);
+    text-align: center;
+    font-size: var(--f6);
+    writing-mode: horizontal-tb;
+}
+
+
+
+
+
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+}
