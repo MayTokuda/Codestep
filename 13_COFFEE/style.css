@@ -244,9 +244,14 @@ dl dd{
         width: 100%;
         padding: 0 16px;
     }
+    .inner{
+        padding-top: 0;
+        padding-bottom: 112px;
+    }
     /* 共通 */
     .title-container{
         height: 94px;
+        background-attachment: scroll;
     }
     .section-title{
         font-size: var(--f5);
@@ -254,8 +259,11 @@ dl dd{
     .sub-title{
         font-size: var(--f6);
         padding-bottom: 0;
-        margin-top: 40px;
-        margin-bottom: 0;
+    }
+    #menu .sub-title,
+    #about .sub-title,
+    #location .sub-title{
+        margin: 25px auto 0;
     }
     /* MENU */
     .menu-content{
@@ -267,14 +275,16 @@ dl dd{
     .menu-item1{
         border: 0;
     }
+    .menu-item3{
+        margin-top: 0px;
+    }
     /* ABOUT */
     #about .about-item .text{
         display: inline-block;
+        padding: 20px 10px;
     }
     /* LOCATION */
     .iframe-wrap iframe {
         width: 100%;
-        
     }
-    /* フッター */
 }
