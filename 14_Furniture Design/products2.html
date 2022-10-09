@@ -13,8 +13,12 @@
     <body>
         <div class="inner">
             <header id="header">
-                <nav class="nav">
-                    <h1 class="site-title"><img src="img/logo.svg" alt=""></h1>
+                <h1 class="site-title"><a href="index.html"><img src="img/logo.svg" alt=""></a></h1>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="nav globalMenuSp">
                     <ul class="nav-list">
                         <li class="nav-item"><a href="products.html">PRODUCTS</a></li>
                         <li class="nav-item"><a href="about.html">ABOUT</a></li>
@@ -22,7 +26,13 @@
                         <li class="nav-item"><a href="company.html">CONTACT</a></li>
                     </ul>
                 </nav>
+                <div class="toggle_btn">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="mask"></div>
             </header>
+
 
             <main>
                 <div id="products">
@@ -83,5 +93,7 @@
                 </nav>
             </footer>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="main.js" async></script>
     </body>
 </html>
