@@ -1,0 +1,271 @@
+@charset "UTF-8";
+:root {
+    --f1: 0.6rem;   /* 10px */
+    --f2: 0.75rem;  /* 12px */
+    --f3: 0.875rem; /* 14px */
+    --basecolor: #333333; /* 基本色 */
+    --bordercolor: #DCDBDB; /* 基本色 */
+    --myw: 1360px; /* 標準幅 */
+}
+html {
+    font-size: 100%;
+}
+body {
+    color: #050507;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: var(--f2);
+    font-weight: 300;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+li {
+    list-style: none;
+}
+
+/*================================================
+    共通
+================================================*/
+.inner{
+    box-sizing: border-box;
+    max-width: var(--myw);
+    padding: 0 40px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 50px;/*←footerの高さ*/
+}
+.page-title{
+    font-size: var(--f3);
+    padding: 40px 0 30px;
+    font-weight: normal;
+}
+/*================================================
+    ヘッダー
+================================================*/
+#header{
+    height: 88px;
+    display: flex;
+    align-items: center;
+}
+#header .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#header .nav .site-title{
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+}
+#header .nav .site-title img{
+    display: block;
+    width: 180px;
+}
+/*================================================
+    TOP, Products, Products2共通
+================================================*/
+.item-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 42px 30px;
+}
+.item-list .item .item-img{
+    margin-bottom: 13px;
+}
+/*================================================
+    TOP
+================================================*/
+/* View Moreボタン */
+.btn{
+    font-size: var(--f3);
+    text-align: center;
+    padding: 40px 0;
+}
+.btn a:hover{
+    color: gray;
+}
+/*================================================
+    Products, Products2
+================================================*/
+/* ページネーション */
+.pagination_list{
+    display: flex;
+    justify-content: center;
+    padding: 45px 0 100px;
+}
+.pagination_item {
+    padding: 0 18px;
+}
+.pagination_item a:hover{
+    color: gray;
+}
+/*================================================
+    Products詳細
+================================================*/
+#products-detail .wrapper{
+    max-width: 800px;
+}
+#products-detail .products-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+}
+#products-detail .item-text p{
+    line-height: 2;
+    padding-bottom: 20px;
+}
+#products-detail .item-text dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+#products-detail .item-text dl dt {
+    width: 100px;
+    padding-bottom: 3px;
+}
+#products-detail .item-text dl dd {
+    width: 230px;
+    padding-bottom: 3px;
+}
+/*================================================
+    About
+================================================*/
+#about .wrapper{
+    max-width: 600px;
+}
+#about p{
+    padding-bottom: 30px;
+}
+/*================================================
+    Company
+================================================*/
+#company .wrapper{
+    max-width: 600px;
+}
+#company dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 45px;
+}
+#company  dl dt {
+    width: 30%;
+    padding: 23px 0;
+    border-bottom: solid 1px var(--bordercolor);
+    text-indent: 7px
+}
+#company dl dd {
+    width: 70%;
+    padding: 23px 0;
+    border-bottom: solid 1px var(--bordercolor);
+    text-indent: 7px
+}
+#company dl dt:nth-child(11){
+    border-bottom-width: 0px;
+}
+#company dl dd:nth-child(12) {
+    border-bottom-width: 0px;
+}
+.iframe-wrap iframe{
+    max-width: 100%;
+    height: 300px;
+    margin-bottom: 160px;
+    filter: grayscale(1);
+}
+/*================================================
+    フッター
+================================================*/
+.footer{
+    display: block;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+    max-width: var(--myw);
+    width: calc(100% - 80px);
+}
+.footer nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.footer .nav-list{
+    display: flex;
+}
+.footer .nav-list .nav-item{
+    padding-right: 30px;
+}
+.footer .nav-list .nav-item:last-child{
+    padding-right: 0px;
+}
+.footer .copyright{
+    font-size: var(--f1);
+}
+
+/*================================================
+    レスポンシブ
+================================================*/
+@media screen and (max-width: 900px) {
+    .inner{
+        width: 100%;
+    }
+    .btn{
+        padding-bottom: 100px;
+    }
+    /*== ヘッダー ===============================*/
+    #header{
+        height: 80px;
+    }
+    /*== TOP, Products, Products2 =============*/
+    .item-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 18px;
+    }
+    /*== Products詳細 =========================*/
+    #products-detail .products-item{
+        grid-template-columns: 1fr;
+    }
+    #products-detail .products-item .item-img{
+        margin-bottom: 20px;
+    }
+    #products-detail  .item-text .btn{
+        padding-bottom: 100px;
+    }    
+    /*== About ================================*/
+    #about p:last-child{
+        padding-bottom: 230px;
+    }
+    /*== Company ==============================*/
+    #company dl {
+        display: block;
+        width: 100%;
+    }
+    #company  dl dt {
+        width: 100%;
+        padding-bottom: 0;
+        border-bottom: 0;
+        text-indent: 0;
+    }
+    #company dl dd {
+        width: 100%;
+        padding-top: 10px;
+        border-bottom: solid 1px var(--bordercolor);
+        text-indent: 0;
+    }    
+    /*== フッター ==============================*/
+    .footer nav{
+        flex-direction: column;
+    }
+    .footer nav .nav-list{
+        padding: 50px 0 10px;
+    }
+}
