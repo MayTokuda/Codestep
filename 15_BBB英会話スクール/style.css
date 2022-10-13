@@ -1,0 +1,333 @@
+@charset "UTF-8";
+:root {
+    --f1: 2.9rem;     /* 46px */
+    --f2: 2.3rem;     /* 36px */
+    --f3: 2rem;       /* 32px */
+    --f4: 1.75rem;    /* 28px */
+    --f5: 1.5rem;     /* 24px */
+    --f6: 1.125rem;   /* 18px */
+    --f7: 1rem;       /* 16px */
+    --f8: .9rem;      /* 15px */
+    --f9: .75rem;     /* 12px */
+    --f10: .6rem;      /* 10px */
+    --redcolor: #FC2A2A;
+    --whitecolor: #FFFFFF;
+    --myfont: 'Josefin Sans', sans-serif;
+    --myw: 720px; /* 標準幅 */
+}
+html {
+    font-size: 100%;
+}
+body {
+    color: #050507;
+    font-family: '游ゴシック', sans-serif;
+    font-weight: 300;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+li {
+    list-style: none;
+}
+.wrapper{
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/*================================================
+    header
+================================================*/
+.nav{
+    display: flex;
+    justify-content: space-around;
+}
+.site-title {
+    width: 100px;
+    height: 56px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+.nav-list{
+    padding-top: 84px;
+    color: var(--whitecolor);
+}
+.nav-item:first-child{
+    padding-top: 84px;
+}
+.nav{
+    position: relative;
+}
+.nav-list{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* ハンバーガーボタン */
+.hamburger {
+    display : block;
+    position: fixed;
+    z-index : 999;
+    right : 0px;
+    top   : 0px;
+    width : 100px;
+    height: 100px;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--redcolor);
+}
+.hamburger span {
+    display : block;
+    position: absolute;
+    width   : 50px;
+    height  : 2px ;
+    left    : 25px;
+    background : var(--whitecolor);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+    top: 36px;
+}
+.hamburger span:nth-child(2) {
+    top: 50px;
+}
+.hamburger span:nth-child(3) {
+    bottom: 36px;
+}
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+    top : 50px;   /* 左下の */
+    left: 25px;   /*  位置  */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+}
+.hamburger.active span:nth-child(2){
+    display: none;
+}
+.hamburger.active span:nth-child(3){
+    top: 50px;   /* 左上の位置 */
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+}
+/* ナビメニュー */
+nav.globalMenuSp {
+    position: fixed;
+    z-index : 99;
+    top  : 0;
+    left : 0;
+    color: #000;
+    background-color: var(--redcolor);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.6s;   /* スライド速度 */
+    width: 100%;
+    height: 100%;
+}
+nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+nav.globalMenuSp ul li {
+    padding: 0;
+    width: 100%;
+}
+nav.globalMenuSp ul li a {
+    display: block;
+    color: var(--bordercolor);
+    padding: 1em 0;
+    text-decoration :none;
+}
+nav.globalMenuSp ul li a:hover{
+    color: red;
+}
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+    opacity: 1;
+    transition: all 0.6s;   /* スライド速度 */
+}
+/*================================================
+    TOP画面
+================================================*/
+#top{
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+#top .catch-copy{
+    position: absolute;
+    top: 285px;
+    left: 135px;
+    font-size: var(--f1);
+    font-weight: bold;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+#top .catch-copy p{
+    text-align: left;
+    text-shadow:1px 1px 3px var(--whitecolor);
+}
+#top .catch-copy a{
+    position: relative;
+    display: inline-flex;
+    background-color: var(--redcolor);
+    padding: 13px 100px;
+    border-radius: 10px;
+    color: var(--whitecolor);
+    font-size: var(--f5);
+    font-weight: normal;
+    height: 60px;
+    box-shadow: 0px 6px 0px 0px #7A051C;
+    margin-top: 20px;
+}
+#top .catch-copy a::after{
+        content: '＞';
+        /* 配置のためのスタイル */
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        right: 15px;
+        margin: auto 0;
+    }
+#top .mainvisual-slide {
+	position: relative;
+	height: 720px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#top .mainvisual-slide::after{
+    content:'';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75%;
+	height: 720px;
+    box-shadow : inset 0px 0px 25px 30px var(--whitecolor) ;
+    z-index: 9;
+}
+#top .item {
+	position: absolute;
+    width: 75%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    object-fit: cover;
+	opacity: 0;
+    animation: anime 15s 0s infinite;   /* animation : [ルール名][変化時間][変化速度][変化開始時間][繰返し回数][終了後の動き] */
+}
+#top .item:nth-of-type(1) {
+	animation-delay: 0s;
+}
+#top .item:nth-of-type(2) {
+	animation-delay: 5s;
+}
+#top .item:nth-of-type(3) {
+	animation-delay: 10s;
+}
+@keyframes anime {
+	0%{ opacity: 0; z-index: -1;}
+	30%{ opacity: 1; z-index: -1;}
+	35%{ opacity: 1; z-index: -1;}
+    50% { opacity: 0; z-index: -1;}
+	100%{ opacity: 0; z-index: -1;}
+} 
+/*================================================
+    共通
+================================================*/
+.section-title{
+    margin: 100px;
+    position: relative;
+}
+.section-title::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    height: 3px;
+    width: 100px;
+}
+/*================================================
+    BBBが選ばれる理由
+================================================*/
+
+.reason-container{
+    background-color: var(--redcolor);
+}
+.content-box{
+    width: 50%;
+    background-color: var(--whitecolor);
+}
+.content-box h3{
+    font-size: var(--f4);
+    color: var(--redcolor);
+}
+.content-box p{
+    font-size: var(--f6);
+}
+.reason-container ul .left{
+    /* CSSアニメーションの指定 */
+    animation: SlideIn 1.6s /*infinite*/; 
+}
+/* CSSアニメーションの設定 */
+@keyframes SlideIn {
+    0% { opacity: 0;/*初期状態では透明に*/
+            transform: translateX(-50%); }
+    100% { opacity: 1;
+            transform: translateX(0); }
+}
+/*================================================
+    受験生の声
+================================================*/
+/*================================================
+    スクールの概要
+================================================*/
+/*================================================
+    申し込み
+================================================*/
+.entry p:first-child{
+    font-size: var(--f3);
+    font-weight: bold;
+}
+.entry-btn{
+    display: block;
+    background-color: var(--redcolor);
+    border-radius: 15px;
+    color: var(--whitecolor);
+}
+
+/*================================================
+    footer
+================================================*/
+.footer-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: left;
+}
+.footer-menu-list li{
+    text-indent: 10px
+}
+/*================================================
+    レスポンシブ
+================================================*/
+@media screen and (max-width: 900px) {
+
+}
+
