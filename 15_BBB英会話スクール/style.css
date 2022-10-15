@@ -60,7 +60,7 @@ li {
     left: 40px;
 }
 .nav-list{
-    padding-top: 84px;
+    
     color: var(--whitecolor);
 }
 .nav-item:first-child{
@@ -593,6 +593,72 @@ nav.globalMenuSp.active {
     レスポンシブ
 ================================================*/
 @media screen and (max-width: 900px) {
-
+    .wrapper{
+        padding: 0 16px;
+    }
+    .nav-item:first-child{
+        padding-top: 124px;
+    }
+    #top .mainvisual-slide .item{
+        width: 100%;
+    }
+    #top .mainvisual-slide::after{
+        width: 100%;
+    }
+    #top .catch-copy{
+        position: static;
+        padding: 0 16px;
+    }
+    .reason-container ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+    .reason-container ul  .left,
+    .reason-container ul .right{
+        padding-left: 35%;
+        padding-right: 3%;
+        width: 100%;
+        justify-content: center;
+    }
+    .reason-container ul .right{
+        margin-top: 20px;
+        margin-left: 11%;
+    }
+    .reason-container ul .right::before{
+        right: 70%;
+    }
+    .reason-container ul .left::before{
+        right: 70%;
+    }
+    /*== 受験生の声 ===============================*/
+    #voice .voice-container,
+    #voice .voice-container li{
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    #voice .voice-container li .photo{
+        margin: 0 auto 50px auto;
+    }
+    #voice .voice-container li .text{
+        width: 90%;
+    }
+    /*== スクールの概要 ===============================*/
+    #overview .item-list{
+        padding: 0 16px;
+    }
+    #overview .item-list{
+        grid-template-columns: 1fr;
+    }
+    /*== 申し込み ===============================*/
+    .entry{
+        padding: 80px 16px;
+    }
+    /*== footer ===============================*/
+    .footer-menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
-
